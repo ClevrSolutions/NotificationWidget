@@ -7,6 +7,10 @@ This widget provides you with a notification bar that can be closed by the user
 
 Use this widget to notifiy a user of something. This can be a big notification. The user has the ability to close the notification. This will not show up for the user until the text of the widget has changed.
 
+## Compatibility
+
+This widget should be compatible with Mendix 5.18 and higher. The widget was built and tested in Mendix 7.6.
+
 ## Contributing
 For more information on contributing to this repository visit [Contributing to a GitHub repository](https://docs.mendix.com/howto/collaboration-project-management/contribute-to-a-github-repository)!
 
