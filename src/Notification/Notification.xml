@@ -1,0 +1,51 @@
+<widget id="Notification.widget.Notification" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Notification (closable)</name>
+    <description>Alert that can be switched off</description>
+    <icon/>
+    <properties>
+        <!-- DATA SOURCE -->
+        <property key="attrText" type="attribute" required="true" isPath="optional" pathType="reference">
+           <caption>Text attribute</caption>
+           <category>Data Source</category>
+           <description>Attribute that contains the text</description>
+           <attributeTypes>
+               <attributeType name="String" />
+           </attributeTypes>
+        </property>
+        <property key="typeText" type="enumeration" defaultValue="html">
+           <caption>Text type</caption>
+           <category>Data Source</category>
+           <description>Type of the text. This can either be HTML or Markdown</description>
+           <enumerationValues>
+               <enumerationValue key="html">HTML</enumerationValue>
+               <enumerationValue key="markdown">Markdown</enumerationValue>
+           </enumerationValues>
+        </property>
+        <property key="attrType" type="attribute" required="false" isPath="optional" pathType="reference">
+           <caption>Type attribute</caption>
+           <category>Data Source</category>
+           <description>This will set the type of the alert. Should be one of the following: 'success', 'info', 'warning' or 'danger'. If this attribute is not set, it will use the setting in Appearance.</description>
+           <attributeTypes>
+               <attributeType name="Enum" />
+           </attributeTypes>
+        </property>
+        <!-- STORAGE -->
+        <property key="storageKey" type="string" required="true" defaultValue="">
+           <caption>Storage Key</caption>
+           <category>Storage</category>
+           <description>This is the key that is used in local storage to determine if the notification should be shown. Please make sure this key is unique if you use multiple notifications. The key should only contain letters and digits, no spaces. Underscore is allowed.</description>
+        </property>
+        <!-- APPEARANCE -->
+        <property key="typeEnum" type="enumeration" defaultValue="info">
+           <caption>Type</caption>
+           <category>Appearance</category>
+           <description>Set type of the alert. This will be overridden by the 'Type attribute' in Data Source.</description>
+           <enumerationValues>
+               <enumerationValue key="info">Info</enumerationValue>
+               <enumerationValue key="success">Success</enumerationValue>
+               <enumerationValue key="warning">Warning</enumerationValue>
+               <enumerationValue key="danger">Danger</enumerationValue>
+           </enumerationValues>
+        </property>
+    </properties>
+</widget>

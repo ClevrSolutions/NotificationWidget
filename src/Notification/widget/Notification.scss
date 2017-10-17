@@ -1,0 +1,10 @@
+.alert_widget_dismissable {
+    .alert {
+        position: relative;
+    }
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+}
