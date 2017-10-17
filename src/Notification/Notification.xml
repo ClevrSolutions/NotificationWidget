@@ -1,4 +1,4 @@
-<widget id="Notification.widget.Notification" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+<widget id="Notification.widget.Notification" needsEntityContext="true" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/">
     <name>Notification (closable)</name>
     <description>Alert that can be switched off</description>
     <icon/>
