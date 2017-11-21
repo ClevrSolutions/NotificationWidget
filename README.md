@@ -1,4 +1,4 @@
-Notification Bar
+Notification Bar [![Support](https://img.shields.io/badge/Mendix%20Support%3A-Community-orange.svg)](https://docs.mendix.com/community/app-store/app-store-content-support)
 ===
 
 This widget provides you with a notification bar that can be closed by the user
