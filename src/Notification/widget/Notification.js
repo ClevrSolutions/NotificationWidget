@@ -1,5 +1,5 @@
 import { defineWidget } from '@/helpers/widget';
-import { log, runCallback } from '@/helpers';
+import { log, warn, runCallback } from '@/helpers';
 
 import domConstruct from 'dojo/dom-construct';
 import domClass from 'dojo/dom-class';
@@ -81,7 +81,7 @@ export default defineWidget('Notification', false, {
                 runCallback.call(this, cb, 'update');
             });
         } catch (e) {
-            logger.warn(this.id, e);
+            warn.call(this.id, e);
             domClass.add(this.domNode, 'hidden');
             runCallback.call(this, cb, 'update');
         }
