@@ -1,6 +1,14 @@
 /*eslint no-invalid-this: 0*/
 
 /**
+ * Get the appropriate Mx logger
+ * @returns
+ */
+function getLogger() {
+    return mx && mx.logger && mx.logger.debug ? mx.logger : logger;
+}
+
+/**
  * Logs using the Mendix logger
  *
  * @export
@@ -8,8 +16,7 @@
  * @param {...any} args
  */
 export function log(methodName, ...args) {
-    const logFx = mx && mx.logger && mx.logger.debug ? mx.logger.debug : logger.debug;
-    logFx(`${this.id}.${methodName}`, args.length ? args[ 0 ] : '');
+    getLogger().debug(`${this.id}.${methodName}`, args.length ? args[ 0 ] : '');
 }
 
 /**
@@ -20,8 +27,7 @@ export function log(methodName, ...args) {
  * @param {...any} args
  */
 export function warn(methodName, ...args) {
-    const logFx = mx && mx.logger && mx.logger.warn ? mx.logger.warn : logger.warn;
-    logFx(`${this.id}.${methodName}`, args.length ? args[ 0 ] : '');
+    getLogger().warn(`${this.id}.${methodName}`, args.length ? args[ 0 ] : '');
 }
 
 /**
